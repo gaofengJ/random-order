@@ -1,3 +1,3 @@
-import config from './config';
+import RouterConfig from './config';
 
-export default config;
+export default RouterConfig;

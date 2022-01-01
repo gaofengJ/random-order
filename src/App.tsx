@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import './App.less'
+import React from 'react';
+import RouterConfig from '@/routes';
+import './App.less';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <div className="App">
-      随机点餐系统
+    <div>
+      <RouterConfig />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

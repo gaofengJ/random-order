@@ -1,4 +1,4 @@
 import Order from './order';
-import Settings from './settings/';
+import Settings from './settings';
 
 export { Order, Settings };

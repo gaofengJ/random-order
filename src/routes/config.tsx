@@ -1,12 +1,12 @@
 import { HashRouter as Router, Route, withRouter } from 'react-router-dom';
-import { CacheRoute, CacheSwitch } from 'react-router-cache-route';
+import CacheRoute, { CacheSwitch } from 'react-router-cache-route';
 import routes from './route';
 
 const MainRouter = withRouter(({ location }) => {
   return (
     <CacheSwitch location={location}>
       {routes.map((route, index: number) => {
-        route.isCache ? (
+        return route.isCache ? (
           <CacheRoute
             cacheKey={route.path}
             key={index}
@@ -27,12 +27,13 @@ const MainRouter = withRouter(({ location }) => {
   );
 });
 
-const config = (props: any) => {
+const RouterConfig = (props: any) => {
   return (
     <Router>
+      222
       <MainRouter />
     </Router>
   );
 };
 
-export default config;
+export default RouterConfig;
