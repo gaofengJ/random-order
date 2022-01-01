@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 import { useDidMount } from 'hooooks';
 import { menus } from '@/data/config';
 import { Button } from 'antd-mobile';
@@ -7,13 +8,14 @@ import './index.less';
 let timer: any = null;
 
 const Order = () => {
+  const History = useHistory();
+
   const [menuArr, setMenuArr] = useState<string[]>([]);
   const [index, setIndex] = useState<number>(0);
   const [isOrdering, setIsOrdering] = useState<boolean>(false);
 
   const handleOrder = () => {
     if (isOrdering) {
-      console.log('isOrdering', isOrdering);
       clearInterval(timer);
       setIsOrdering(false);
       return;
@@ -25,6 +27,10 @@ const Order = () => {
       const num = Math.floor(Math.random() * (len + 1));
       setIndex(num);
     }, 50);
+  };
+
+  const handelGoSettings = () => {
+    History.push('/settings');
   };
 
   useDidMount(() => {
@@ -42,7 +48,9 @@ const Order = () => {
         <Button color='primary' onClick={handleOrder}>
           {isOrdering ? '停止点菜' : '开始点菜'}
         </Button>
-        <Button color='primary'>修改菜单</Button>
+        <Button color='primary' onClick={handelGoSettings}>
+          修改菜单
+        </Button>
       </div>
     </div>
   );
