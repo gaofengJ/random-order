@@ -30,7 +30,6 @@ const MainRouter = withRouter(({ location }) => {
 const RouterConfig = (props: any) => {
   return (
     <Router>
-      222
       <MainRouter />
     </Router>
   );

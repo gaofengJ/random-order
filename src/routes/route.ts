@@ -15,10 +15,6 @@ const routes: IRoute[] = [
     Component: Order,
   },
   {
-    path: '/order',
-    Component: Order,
-  },
-  {
     path: '/settings',
     Component: Settings,
   },
