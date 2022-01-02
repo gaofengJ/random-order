@@ -24,7 +24,7 @@ const Order = () => {
     const len = menuArr.length;
     if (!len) return;
     timer = setInterval(() => {
-      const num = Math.floor(Math.random() * (len + 1));
+      const num = Math.floor(Math.random() * len);
       setIndex(num);
     }, 50);
   };
