@@ -48,6 +48,15 @@ const Settings = () => {
   return (
     <div className='settings-page'>
       <div className='menu-content'>
+        <div
+          className='menu-item button-add'
+          onClick={() => {
+            setVisible(true);
+          }}
+        >
+          添加
+          <AddOutline color='#999' fontSize='18' />
+        </div>
         {menuArr.map((i, index) => {
           return (
             <div className='menu-item' key={index}>
@@ -62,15 +71,6 @@ const Settings = () => {
             </div>
           );
         })}
-        <div
-          className='menu-item button-add'
-          onClick={() => {
-            setVisible(true);
-          }}
-        >
-          添加
-          <AddOutline color='#999' fontSize='18' />
-        </div>
       </div>
       <div className='button-wrapper'>
         <Button color='primary' onClick={handleConfirm}>
