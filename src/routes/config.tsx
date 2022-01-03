@@ -29,7 +29,7 @@ const MainRouter = withRouter(({ location }) => {
 
 const RouterConfig = (props: any) => {
   return (
-    <Router>
+    <Router basename='/random-order'>
       <MainRouter />
     </Router>
   );
