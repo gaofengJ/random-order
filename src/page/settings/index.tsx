@@ -20,13 +20,9 @@ const Settings = () => {
   };
 
   const handleAddMenu = () => {
-    console.log(111);
     const tempMenuArr: string[] = menuArr.concat([]);
-    console.log(222, menuArr, tempMenuArr);
     tempMenuArr.push(inputValue);
-    console.log(333);
     setMenuArr(tempMenuArr);
-    console.log(444);
     setVisible(false);
   };
 
